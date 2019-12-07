@@ -46,8 +46,19 @@ namespace Day1
 
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Hello World!");
+            string[] ModuleMasses;
+            string input_file = Path.Combine(Directory.GetCurrentDirectory(), "input.txt");
+
+            double[] doubleModuleMasses;
+            int FuelRequirement;
+
+            FuelCounter fuelCounter = new FuelCounter();
+            ModuleMasses = fuelCounter.LoadModuleMass(input_file);
+
+            doubleModuleMasses = fuelCounter.ConvertArray_StringToDouble(ModuleMasses);
+            FuelRequirement = fuelCounter.Sum_RequiredFuel(doubleModuleMasses);
+
+            Console.WriteLine("Fuel required: {0}", FuelRequirement);
         }
     }
 }
