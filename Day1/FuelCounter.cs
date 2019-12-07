@@ -42,6 +42,11 @@ namespace Day1
                 Sum += ModuleFuel;
             }
             return Sum;
+        }
+
+        public int FuelDivider(int mass)
+        {
+            throw new NotImplementedException("Please write a test first.");
         } 
 
         static void Main(string[] args)
