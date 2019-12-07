@@ -31,11 +31,22 @@ namespace Day1
 
         public int Sum_RequiredFuel(double[] ModuleMasses)
         {
-            throw new NotImplementedException("Please create a test first.");
+            int Sum = 0;
+            int ModuleFuel = 0;
+            double mass = 0.0d;
+
+            for (int i = 0; i < ModuleMasses.Length; i++)
+            {
+                mass = ModuleMasses[i];
+                ModuleFuel = Convert.ToInt32(Math.Floor(mass/3.0d) - 2);
+                Sum += ModuleFuel;
+            }
+            return Sum;
         } 
 
-        static public void Main()
+        static void Main(string[] args)
         {
+            
             Console.WriteLine("Hello World!");
         }
     }
